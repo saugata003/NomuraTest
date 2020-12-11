@@ -13,23 +13,22 @@ class QuotesVC: UIViewController {
     var quotesArray:[Result] = []
     @IBOutlet weak var quotesTblView: UITableView!
     var timer: Timer?
-
+    // MARK: View Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllQuotesFromApiCall()
         Timer.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.updateCounting), object: nil)
         timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
     }
-    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         timer?.invalidate()
     }
-
+    // MARK: Custom Methods
     @objc func updateCounting(){
         getAllQuotesFromApiCall()
     }
-
+    // MARK: Api Call
     func getAllQuotesFromApiCall() {
         showProgressHUD()
         quotesVM.delegate = self
@@ -38,6 +37,7 @@ class QuotesVC: UIViewController {
 }
 
 extension QuotesVC: ViewModelDelegate {
+    // MARK: View Model Delegate Methods
     func viewModelDidUpdate(sender: NomuraViewModel) {
         DispatchQueue.main.async {
             self.hideProgressHUD()
