@@ -12,7 +12,7 @@ import Alamofire
 extension UIViewController {
     func noInternetConnectionError() {
         if !(NetworkReachabilityManager()?.isReachable)! {
-            let alertController = UIAlertController(title: "", message: "No Internet Connection Present", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "", message: ErrorCodes["E0001"], preferredStyle: .alert)
             let OKAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
                 exit(0)})
             alertController.addAction(OKAction)

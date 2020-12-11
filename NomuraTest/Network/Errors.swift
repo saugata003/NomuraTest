@@ -46,17 +46,17 @@ class NomuraAppServiceError: NomuraAppError {
         var localizedMessage: String {
             switch self {
             case .unknownError:
-                return "Unknown error. Please try again later."
+                return ErrorCodes["E0002"]!
             case .connectionError:
-                return "Could not connect to server. Please try again later."
+                return ErrorCodes["E0003"]!
             case .noNetwork:
-                return "Not connected to internet. Please check your connection"
+                return ErrorCodes["E0004"]!
             case .requestTimeOut:
-                return "Request Timed out"
+                return ErrorCodes["E0005"]!
             }
         }
         var localizedTitle: String? {
-            return "Nomura Assignment"
+            return assignmentName
         }
     }
     static func customError(for error: NSError) -> ErrorCode {
@@ -95,11 +95,11 @@ class NomuraAppServerResponseError: NomuraAppError {
             case .serverErrorMessage(let message):
                 return message
             default:
-                return "No Internet Connection Found!!!"
+                return ErrorCodes["E0006"]!
             }
         }
         var localizedTitle: String? {
-            return "Nomura Assignment"
+            return assignmentName
         }
     }
     public convenience init(error: String) {
@@ -118,10 +118,10 @@ class NomuraAppErrorResponse: NomuraAppError {
             return "APIResponse"
         }
         var localizedMessage: String {
-            return "No Internet Connection Found!!!"
+            return ErrorCodes["E0006"]!
         }
         var localizedTitle: String? {
-            return "Nomura Assignment"
+            return assignmentName
         }
     }
     public convenience init(error: String) {

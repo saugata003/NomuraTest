@@ -28,6 +28,7 @@
 		19F5E98D2583C68A00EB8E03 /* get-quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 19F2563F2583A5E000E66547 /* get-quotes.json */; };
 		19F5E98E2583C68E00EB8E03 /* get-quotesError.json in Resources */ = {isa = PBXBuildFile; fileRef = 19F256412583A6AA00E66547 /* get-quotesError.json */; };
 		19F5E98F2583C69100EB8E03 /* get-quotesJsonError.json in Resources */ = {isa = PBXBuildFile; fileRef = 19F256432583A6C900E66547 /* get-quotesJsonError.json */; };
+		19F5E9912583D48500EB8E03 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5E9902583D48500EB8E03 /* AppConstants.swift */; };
 		79F1B8B1C32B0C7522CFB2E0 /* Pods_NomuraTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957F35C13E260C4415BCE43 /* Pods_NomuraTestTests.framework */; };
 		7FED7A2CD88EC19812A752DE /* Pods_NomuraTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B333B6B786D066908A6AF01 /* Pods_NomuraTest.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		19F256412583A6AA00E66547 /* get-quotesError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "get-quotesError.json"; sourceTree = "<group>"; };
 		19F256432583A6C900E66547 /* get-quotesJsonError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "get-quotesJsonError.json"; path = "/Users/rac/Documents/NomuraTest/NomuraTestTests/Mock Response/get-quotesJsonError.json"; sourceTree = "<absolute>"; };
 		19F5E9892583C27000EB8E03 /* ViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTest.swift; sourceTree = "<group>"; };
+		19F5E9902583D48500EB8E03 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		2EA280F6783B64849E7D6256 /* Pods-NomuraTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomuraTestTests.debug.xcconfig"; path = "Target Support Files/Pods-NomuraTestTests/Pods-NomuraTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B333B6B786D066908A6AF01 /* Pods_NomuraTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NomuraTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C957F35C13E260C4415BCE43 /* Pods_NomuraTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NomuraTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 			children = (
 				191E71232566F2640013C4E3 /* UIViewController+Additions.swift */,
 				1939DB5C256AB55B004FDAF5 /* UIColor+Additions.swift */,
+				19F5E9902583D48500EB8E03 /* AppConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				191E71222566F1440013C4E3 /* NomuraViewModel.swift in Sources */,
 				191E71182566EA9E0013C4E3 /* ResponseModel.swift in Sources */,
 				191E711C2566EAD50013C4E3 /* Errors.swift in Sources */,
+				19F5E9912583D48500EB8E03 /* AppConstants.swift in Sources */,
 				191E71242566F2640013C4E3 /* UIViewController+Additions.swift in Sources */,
 				1951D1372566984300E4699A /* SceneDelegate.swift in Sources */,
 			);

@@ -32,7 +32,7 @@ class NomuraViewModelTests: XCTestCase {
             fileName = "\(name).json"
         }
         let stubPath = OHPathForFile(fileName, type(of: self))
-        return fixture(filePath: stubPath!, headers: ["Content-Type": APIConstants.contentType, "X-RapidAPI-Key": "928a360a00msh5f86e72a11c7b4cp10af77jsn7455eedbb8d8", "X-RapidAPI-Host": APIConstants.baseURL])
+        return fixture(filePath: stubPath!, headers: ["Content-Type": APIConstants.contentType, "X-RapidAPI-Key": APIConstants.keyValue, "X-RapidAPI-Host": APIConstants.baseURL])
     }
     func errorProvider(request: URLRequest) -> HTTPStubsResponse {
         guard var fileName = errorFile else {
@@ -40,7 +40,7 @@ class NomuraViewModelTests: XCTestCase {
         }
         fileName = "\(fileName).json"
         let stubPath = OHPathForFile(fileName, type(of: self))
-        return fixture(filePath: stubPath!, headers: ["Content-Type": APIConstants.contentType, "X-RapidAPI-Key": "928a360a00msh5f86e72a11c7b4cp10af77jsn7455eedbb8d8", "X-RapidAPI-Host": APIConstants.baseURL])
+        return fixture(filePath: stubPath!, headers: ["Content-Type": APIConstants.contentType, "X-RapidAPI-Key": APIConstants.keyValue, "X-RapidAPI-Host": APIConstants.baseURL])
     }
 }
 class StepViewModelTest: NomuraViewModelTests {

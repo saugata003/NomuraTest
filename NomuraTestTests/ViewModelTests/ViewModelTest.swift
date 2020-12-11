@@ -31,7 +31,7 @@ class ViewModelTest: NomuraViewModelTests {
         let expect = XCTestExpectation.init(description: "Stock Records Error")
         promise = expect
         errorFile = "get-quotesError"
-        expectedError = "No records found"
+        expectedError = ErrorCodes["E0007"]
         quotesVM.delegate = self
         quotesVM.getQuotesList()
         wait(for: [expect], timeout: 30)

@@ -11,6 +11,7 @@ import Alamofire
 struct APIConstants {
     static let baseURL = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/"
     static let contentType = "application/json; charset=utf-8"
+    static let keyValue = "928a360a00msh5f86e72a11c7b4cp10af77jsn7455eedbb8d8"
 }
 
 protocol APIConfiguration: URLRequestConvertible {
@@ -33,7 +34,7 @@ public class APIRouter: APIConfiguration {
     public func asURLRequest() throws -> URLRequest {
         var request = URLRequest(url: URL.init(string: APIConstants.baseURL+path)!)
         request.setValue(APIConstants.contentType, forHTTPHeaderField: "Content-Type")
-        request.setValue("928a360a00msh5f86e72a11c7b4cp10af77jsn7455eedbb8d8", forHTTPHeaderField: "X-RapidAPI-Key")
+        request.setValue(APIConstants.keyValue, forHTTPHeaderField: "X-RapidAPI-Key")
         request.setValue(APIConstants.baseURL, forHTTPHeaderField: "X-RapidAPI-Host")
         request.httpMethod = method.rawValue
         request.timeoutInterval = TimeInterval(10 * 1000)
