@@ -34,7 +34,7 @@ public class APIRouter: APIConfiguration {
         var request = URLRequest(url: URL.init(string: APIConstants.baseURL+path)!)
         request.setValue(APIConstants.contentType, forHTTPHeaderField: "Content-Type")
         request.setValue("928a360a00msh5f86e72a11c7b4cp10af77jsn7455eedbb8d8", forHTTPHeaderField: "X-RapidAPI-Key")
-        request.setValue("apidojo-yahoo-finance-v1.p.rapidapi.com", forHTTPHeaderField: "X-RapidAPI-Host")
+        request.setValue(APIConstants.baseURL, forHTTPHeaderField: "X-RapidAPI-Host")
         request.httpMethod = method.rawValue
         request.timeoutInterval = TimeInterval(10 * 1000)
         if method.rawValue == HTTPMethod.get.rawValue {

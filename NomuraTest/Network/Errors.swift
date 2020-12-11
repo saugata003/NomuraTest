@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 public protocol NomuraAppErrorCode {
     var code: Int {get}
     var domain: String {get}

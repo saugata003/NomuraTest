@@ -6,14 +6,16 @@ target 'NomuraTest' do
   use_frameworks!
 
   # Pods for NomuraTest
-  pod 'Alamofire'
-  pod 'MBProgressHUD', '~> 1.1.0'
+    pod 'Alamofire'
+    pod 'MBProgressHUD', '~> 1.1.0'
+    pod 'OHHTTPStubs/Swift'
 
   target 'NomuraTestTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Alamofire'
-  pod 'MBProgressHUD', '~> 1.1.0'
+    pod 'MBProgressHUD', '~> 1.1.0'
+    pod 'OHHTTPStubs/Swift'
   end
 
 end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190FE3242583BB8500DD720B /* NomuraViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190FE3232583BB8500DD720B /* NomuraViewModelTests.swift */; };
 		191E71182566EA9E0013C4E3 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E71172566EA9E0013C4E3 /* ResponseModel.swift */; };
 		191E711A2566EAD10013C4E3 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E71192566EAD10013C4E3 /* Service.swift */; };
 		191E711C2566EAD50013C4E3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E711B2566EAD50013C4E3 /* Errors.swift */; };
@@ -23,6 +24,10 @@
 		1951D1412566984500E4699A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1951D13F2566984500E4699A /* LaunchScreen.storyboard */; };
 		1951D14C2566984500E4699A /* NomuraTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951D14B2566984500E4699A /* NomuraTestTests.swift */; };
 		19D62C51256836080016B530 /* QuotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D62C50256836080016B530 /* QuotesCell.swift */; };
+		19F5E98A2583C27000EB8E03 /* ViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5E9892583C27000EB8E03 /* ViewModelTest.swift */; };
+		19F5E98D2583C68A00EB8E03 /* get-quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 19F2563F2583A5E000E66547 /* get-quotes.json */; };
+		19F5E98E2583C68E00EB8E03 /* get-quotesError.json in Resources */ = {isa = PBXBuildFile; fileRef = 19F256412583A6AA00E66547 /* get-quotesError.json */; };
+		19F5E98F2583C69100EB8E03 /* get-quotesJsonError.json in Resources */ = {isa = PBXBuildFile; fileRef = 19F256432583A6C900E66547 /* get-quotesJsonError.json */; };
 		79F1B8B1C32B0C7522CFB2E0 /* Pods_NomuraTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957F35C13E260C4415BCE43 /* Pods_NomuraTestTests.framework */; };
 		7FED7A2CD88EC19812A752DE /* Pods_NomuraTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B333B6B786D066908A6AF01 /* Pods_NomuraTest.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		0D84B97B75AF91940DE04BCC /* Pods-NomuraTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomuraTestTests.release.xcconfig"; path = "Target Support Files/Pods-NomuraTestTests/Pods-NomuraTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		190FE3232583BB8500DD720B /* NomuraViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomuraViewModelTests.swift; sourceTree = "<group>"; };
 		191E71172566EA9E0013C4E3 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		191E71192566EAD10013C4E3 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		191E711B2566EAD50013C4E3 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -59,6 +65,10 @@
 		1951D14B2566984500E4699A /* NomuraTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomuraTestTests.swift; sourceTree = "<group>"; };
 		1951D14D2566984500E4699A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D62C50256836080016B530 /* QuotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesCell.swift; sourceTree = "<group>"; };
+		19F2563F2583A5E000E66547 /* get-quotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "get-quotes.json"; sourceTree = "<group>"; };
+		19F256412583A6AA00E66547 /* get-quotesError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "get-quotesError.json"; sourceTree = "<group>"; };
+		19F256432583A6C900E66547 /* get-quotesJsonError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "get-quotesJsonError.json"; path = "/Users/rac/Documents/NomuraTest/NomuraTestTests/Mock Response/get-quotesJsonError.json"; sourceTree = "<absolute>"; };
+		19F5E9892583C27000EB8E03 /* ViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTest.swift; sourceTree = "<group>"; };
 		2EA280F6783B64849E7D6256 /* Pods-NomuraTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomuraTestTests.debug.xcconfig"; path = "Target Support Files/Pods-NomuraTestTests/Pods-NomuraTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B333B6B786D066908A6AF01 /* Pods_NomuraTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NomuraTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C957F35C13E260C4415BCE43 /* Pods_NomuraTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NomuraTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,10 +215,31 @@
 		1951D14A2566984500E4699A /* NomuraTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				198EA13F2583A8E700103301 /* ViewModelTests */,
 				1951D14B2566984500E4699A /* NomuraTestTests.swift */,
+				19F2563E2583A5C900E66547 /* Mock Response */,
 				1951D14D2566984500E4699A /* Info.plist */,
 			);
 			path = NomuraTestTests;
+			sourceTree = "<group>";
+		};
+		198EA13F2583A8E700103301 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				190FE3232583BB8500DD720B /* NomuraViewModelTests.swift */,
+				19F5E9892583C27000EB8E03 /* ViewModelTest.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		19F2563E2583A5C900E66547 /* Mock Response */ = {
+			isa = PBXGroup;
+			children = (
+				19F2563F2583A5E000E66547 /* get-quotes.json */,
+				19F256412583A6AA00E66547 /* get-quotesError.json */,
+				19F256432583A6C900E66547 /* get-quotesJsonError.json */,
+			);
+			path = "Mock Response";
 			sourceTree = "<group>";
 		};
 		4447FF19F614C2C5223E2170 /* Pods */ = {
@@ -317,6 +348,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19F5E98E2583C68E00EB8E03 /* get-quotesError.json in Resources */,
+				19F5E98D2583C68A00EB8E03 /* get-quotes.json in Resources */,
+				19F5E98F2583C69100EB8E03 /* get-quotesJsonError.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +461,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19F5E98A2583C27000EB8E03 /* ViewModelTest.swift in Sources */,
+				190FE3242583BB8500DD720B /* NomuraViewModelTests.swift in Sources */,
 				1951D14C2566984500E4699A /* NomuraTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
