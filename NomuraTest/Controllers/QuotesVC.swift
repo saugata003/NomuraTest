@@ -18,7 +18,7 @@ class QuotesVC: UIViewController {
         super.viewDidLoad()
         getAllQuotesFromApiCall()
         Timer.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.updateCounting), object: nil)
-        timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
