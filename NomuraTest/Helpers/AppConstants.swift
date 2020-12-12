@@ -14,7 +14,8 @@ let ErrorCodes: [String: String] = ["E0001": "No Internet Connection Present",
                                     "E0004": "Not connected to internet. Please check your connection",
                                     "E0005": "Request Timed out",
                                     "E0006": "No Internet Connection Found!!!",
-                                    "E0007": "No records found"]
+                                    "E0007": "No Quotes Present!!!!",
+                                    "E0008": "Server has encountered some issue. Please try again later!!!!"]
 
 
 

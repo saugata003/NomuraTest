@@ -45,7 +45,7 @@ extension QuotesVC: ViewModelDelegate {
             if let details = self.quotesVM.model?.quoteResponse.result, details.count>0 {
                 self.quotesArray = details
             } else {
-               self.alert(message: "No Quotes Present!!!!")
+               self.alert(message: ErrorCodes["E0007"]!)
             }
             self.quotesTblView.reloadData()
         }
@@ -54,7 +54,7 @@ extension QuotesVC: ViewModelDelegate {
     func viewModelUpdateFailed(error: NomuraAppError) {
         hideProgressHUD()
         print(error.description)
-        alert(message: "Server has encountered some issue. Please try again later!!!!")
+        alert(message: ErrorCodes["E0008"]!)
     }
 }
 
