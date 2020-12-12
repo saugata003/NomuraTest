@@ -22,6 +22,7 @@ class QuotesVM: NomuraViewModel {
                 let item = try decoder.decode(QuotesModel.self, from: data)
                 self?.model = item
             } catch {
+                print(error.localizedDescription)
                 self?.delegate?.viewModelUpdateFailed(error: NomuraAppServerResponseError.JsonParsing)
             }
         }, failure: { (error) in

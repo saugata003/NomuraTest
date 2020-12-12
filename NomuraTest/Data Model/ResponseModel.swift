@@ -6,6 +6,8 @@
 //  Copyright © 2020 Saugata Chakraborty. All rights reserved.
 //
 
+
+
 // MARK: - QuotesModel
 struct QuotesModel: Codable {
     let quoteResponse: QuoteResponse
@@ -14,7 +16,7 @@ struct QuotesModel: Codable {
 // MARK: - QuoteResponse
 struct QuoteResponse: Codable {
     let result: [Result]
-    let error: String?
+    let error: JSONNull?
 }
 
 // MARK: - Result
@@ -22,8 +24,23 @@ struct Result: Codable {
     let language, region, quoteType, quoteSourceName: String
     let triggerable: Bool
     let quoteSummary: QuoteSummary
+    let components: [String]
     let currency: String
-    let regularMarketPreviousClose, ask: Double
+    let firstTradeDateMilliseconds, priceHint, totalCash, floatShares: Int
+    let ebitda: Int
+    let shortRatio: Double
+    let targetPriceHigh: Int
+    let targetPriceLow, targetPriceMean: Double
+    let targetPriceMedian: Int
+    let heldPercentInsiders, heldPercentInstitutions, postMarketChangePercent: Double
+    let postMarketTime: Int
+    let postMarketPrice, postMarketChange, regularMarketChange, regularMarketChangePercent: Double
+    let regularMarketTime: Int
+    let regularMarketPrice, regularMarketDayHigh: Double
+    let regularMarketDayRange: String
+    let regularMarketDayLow: Double
+    let regularMarketVolume, sharesShort, sharesShortPrevMonth: Int
+    let shortPercentFloat, regularMarketPreviousClose, bid, ask: Double
     let bidSize, askSize: Int
     let exchange, market, messageBoardID, fullExchangeName: String
     let shortName, longName: String
@@ -49,30 +66,14 @@ struct Result: Codable {
     let pageViews: PageViews
     let gmtOffSetMilliseconds: Int
     let esgPopulated, tradeable: Bool
-    let totalCash, floatShares, ebitda: Int
-    let shortRatio: Double
-    let targetPriceHigh: Int
-    let targetPriceLow, targetPriceMean: Double
-    let targetPriceMedian: Int
-    let heldPercentInsiders, heldPercentInstitutions, postMarketChangePercent: Double
-    let postMarketTime: Int
-    let postMarketPrice, postMarketChange, regularMarketChange, regularMarketChangePercent: Double
-    let regularMarketTime: Int
-    let regularMarketPrice, regularMarketDayHigh: Double
-    let regularMarketDayRange: String
-    let regularMarketDayLow: Double
-    let regularMarketVolume, sharesShort, sharesShortPrevMonth: Int
-    let shortPercentFloat, bid: Double
-    let firstTradeDateMilliseconds, priceHint: Int
-    let components: [String]
     let symbol: String
     let dividendDate: Int?
     let trailingAnnualDividendRate, dividendRate, trailingAnnualDividendYield, dividendYield: Double?
 
     enum CodingKeys: String, CodingKey {
-        case language, region, quoteType, quoteSourceName, triggerable, quoteSummary, currency, regularMarketPreviousClose, ask, bidSize, askSize, exchange, market
+        case language, region, quoteType, quoteSourceName, triggerable, quoteSummary, components, currency, firstTradeDateMilliseconds, priceHint, totalCash, floatShares, ebitda, shortRatio, targetPriceHigh, targetPriceLow, targetPriceMean, targetPriceMedian, heldPercentInsiders, heldPercentInstitutions, postMarketChangePercent, postMarketTime, postMarketPrice, postMarketChange, regularMarketChange, regularMarketChangePercent, regularMarketTime, regularMarketPrice, regularMarketDayHigh, regularMarketDayRange, regularMarketDayLow, regularMarketVolume, sharesShort, sharesShortPrevMonth, shortPercentFloat, regularMarketPreviousClose, bid, ask, bidSize, askSize, exchange, market
         case messageBoardID = "messageBoardId"
-        case fullExchangeName, shortName, longName, regularMarketOpen, averageDailyVolume3Month, averageDailyVolume10Day, beta, fiftyTwoWeekLowChange, fiftyTwoWeekLowChangePercent, fiftyTwoWeekRange, fiftyTwoWeekHighChange, fiftyTwoWeekHighChangePercent, fiftyTwoWeekLow, fiftyTwoWeekHigh, exDividendDate, earningsTimestamp, earningsTimestampStart, earningsTimestampEnd, trailingPE, pegRatio, dividendsPerShare, revenue, priceToSales, marketState, epsTrailingTwelveMonths, epsForward, epsCurrentYear, epsNextQuarter, priceEpsCurrentYear, priceEpsNextQuarter, sharesOutstanding, bookValue, fiftyDayAverage, fiftyDayAverageChange, fiftyDayAverageChangePercent, twoHundredDayAverage, twoHundredDayAverageChange, twoHundredDayAverageChangePercent, marketCap, forwardPE, priceToBook, sourceInterval, exchangeDataDelayedBy, exchangeTimezoneName, exchangeTimezoneShortName, pageViews, gmtOffSetMilliseconds, esgPopulated, tradeable, totalCash, floatShares, ebitda, shortRatio, targetPriceHigh, targetPriceLow, targetPriceMean, targetPriceMedian, heldPercentInsiders, heldPercentInstitutions, postMarketChangePercent, postMarketTime, postMarketPrice, postMarketChange, regularMarketChange, regularMarketChangePercent, regularMarketTime, regularMarketPrice, regularMarketDayHigh, regularMarketDayRange, regularMarketDayLow, regularMarketVolume, sharesShort, sharesShortPrevMonth, shortPercentFloat, bid, firstTradeDateMilliseconds, priceHint, components, symbol, dividendDate, trailingAnnualDividendRate, dividendRate, trailingAnnualDividendYield, dividendYield
+        case fullExchangeName, shortName, longName, regularMarketOpen, averageDailyVolume3Month, averageDailyVolume10Day, beta, fiftyTwoWeekLowChange, fiftyTwoWeekLowChangePercent, fiftyTwoWeekRange, fiftyTwoWeekHighChange, fiftyTwoWeekHighChangePercent, fiftyTwoWeekLow, fiftyTwoWeekHigh, exDividendDate, earningsTimestamp, earningsTimestampStart, earningsTimestampEnd, trailingPE, pegRatio, dividendsPerShare, revenue, priceToSales, marketState, epsTrailingTwelveMonths, epsForward, epsCurrentYear, epsNextQuarter, priceEpsCurrentYear, priceEpsNextQuarter, sharesOutstanding, bookValue, fiftyDayAverage, fiftyDayAverageChange, fiftyDayAverageChangePercent, twoHundredDayAverage, twoHundredDayAverageChange, twoHundredDayAverageChangePercent, marketCap, forwardPE, priceToBook, sourceInterval, exchangeDataDelayedBy, exchangeTimezoneName, exchangeTimezoneShortName, pageViews, gmtOffSetMilliseconds, esgPopulated, tradeable, symbol, dividendDate, trailingAnnualDividendRate, dividendRate, trailingAnnualDividendYield, dividendYield
     }
 }
 
@@ -125,3 +126,31 @@ struct FinancialsChartQuarterly: Codable {
 struct Yearly: Codable {
     let date, revenue, earnings: Int
 }
+
+// MARK: - Encode/decode helpers
+
+class JSONNull: Codable, Hashable {
+
+    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
+        return true
+    }
+
+    public var hashValue: Int {
+        return 0
+    }
+
+    public init() {}
+
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if !container.decodeNil() {
+            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+        }
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encodeNil()
+    }
+}
+

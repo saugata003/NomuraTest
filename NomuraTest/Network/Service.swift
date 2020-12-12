@@ -35,7 +35,7 @@ public class APIRouter: APIConfiguration {
         var request = URLRequest(url: URL.init(string: APIConstants.baseURL+path)!)
         request.setValue(APIConstants.contentType, forHTTPHeaderField: "Content-Type")
         request.setValue(APIConstants.keyValue, forHTTPHeaderField: "X-RapidAPI-Key")
-        request.setValue(APIConstants.baseURL, forHTTPHeaderField: "X-RapidAPI-Host")
+        request.setValue(APIConstants.baseURL.replacingOccurrences(of:"https://" , with: ""), forHTTPHeaderField: "X-RapidAPI-Host")
         request.httpMethod = method.rawValue
         request.timeoutInterval = TimeInterval(10 * 1000)
         if method.rawValue == HTTPMethod.get.rawValue {

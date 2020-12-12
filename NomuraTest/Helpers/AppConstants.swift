@@ -3,7 +3,7 @@
 //  NomuraTest
 //
 //  Created by Saugata Chakraborty on 11/12/20.
-//  Copyright © 2020 Azure. All rights reserved.
+//  Copyright © 2020 Saugata Chakraborty. All rights reserved.
 //
 
 import UIKit
