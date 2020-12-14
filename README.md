@@ -1,7 +1,7 @@
 # NomuraTest
 This app demostrate the usage of Yahoo Finance API stock records details information.
 
-# Architecture
+# Architecture & Design
 
 This code is written in Swift 5 using MVVM design pattern. This project consists of Alamofire framework to consume webservices & also added the Unit test cases using OHHTTPStubs framework.
 
